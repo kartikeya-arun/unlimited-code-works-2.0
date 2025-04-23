@@ -4,6 +4,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 const uri = process.env.DB_URI;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+
+console.log("69: DB URL from environment->", uri);
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
