@@ -8,7 +8,10 @@ app.use(cors());
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend URL
+    origin: [
+      "http://localhost:5173",
+      "unlimited-code-works-2-0-aceternity.vercel.app",
+    ], // Your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
