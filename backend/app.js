@@ -13,7 +13,9 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
-
+app.get("/", async (req, res) => {
+  res.redirect("/projects");
+});
 app.get("/projects", async (req, res) => {
   const data = await run().catch(console.dir);
   res.json(data);
