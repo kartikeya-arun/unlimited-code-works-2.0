@@ -6,7 +6,9 @@ export default function ProjectGrid() {
   const [projects, setProjects] = useState();
   const getProjects = async () => {
     try {
-      const response = await fetch("http://localhost:8081/projects");
+      const response = await fetch(
+        "https://unlimited-code-works-2-0.vercel.app/projects",
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
